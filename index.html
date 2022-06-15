@@ -467,6 +467,26 @@
             </li>
           </ul>
         </div>
+        <div class="newsletter">
+          <h3 class="newsletter-h">Zapisz się do newslettera</h3>
+
+          <form>
+            <label>
+              <input
+                class="newsletter-email"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="newsletter-button" type="submit">
+              Zapisz się
+              <svg class="newsletter-icon">
+                <use href="./image/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -476,6 +496,50 @@
             <use href="./image/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <h3 class="modal-head">Zostaw swoje dane w formularzu poniżej</h3>
+        <form class="modal-label">
+          <label class="modal-label-item">
+            Imie
+            <svg class="modal-label-icon">
+              <use href="./image/icons.svg#icon-user"></use>
+            </svg>
+            <input class="modal-label-input" type="text" name="username" />
+          </label>
+          <label class="modal-label-item">
+            Telefon
+            <svg class="modal-label-icon">
+              <use href="./image/icons.svg#icon-telefon"></use>
+            </svg>
+            <input class="modal-label-input" type="tel" name="phone_number" />
+          </label>
+          <label class="modal-label-item">
+            Email
+            <svg class="modal-label-icon">
+              <use href="./image/icons.svg#icon-anvelope-modal"></use>
+            </svg>
+            <input class="modal-label-input" type="email" name="email" />
+          </label>
+          <label class="modal-label-item">
+            Komentarz
+            <textarea
+              class="modal-label-input-comments"
+              name="feedback"
+              rows="5"
+              placeholder="Wprowadż tekst"
+            ></textarea>
+          </label>
+          <div class="acception">
+            <input type="checkbox" name="acception" value="zgoda" required />
+            <label>
+              Oświadczam iż akceptuję
+              <a href="#Regulamin">Regulamin</a>
+              i
+              <a href="#Politykę">Politykę Prywatności.</a>
+            </label>
+          </div>
+
+          <button class="acception-submit" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

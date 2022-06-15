@@ -499,11 +499,10 @@ figure {
 }
 
 .join-us-headeer {
-  font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 1.14em;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--color-slogan);
   text-align: left;
@@ -529,9 +528,10 @@ figure {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.join-us-list-link:nth-child(-n + 2) {
+.join-us-list-link:nth-last-child(-n + 2) {
   margin-right: 10px;
 }
+
 .join-us-list-link:hover,
 .join-us-list-link:active {
   background-color: var(--color-variable);
@@ -542,7 +542,51 @@ figure {
   height: 20px;
   fill: currentcolor;
 }
+.newsletter {
+  height: 86px;
+  margin-left: 78px;
+}
+.newsletter-h {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-slogan);
+  text-align: left;
+}
+.newsletter-email {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--color-background);
+  padding-right: 0;
+  padding-left: 16px;
+}
 
+.newsletter-button {
+  width: 200px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-variable);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  padding: 0;
+  margin-left: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.newsletter-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  margin-left: 24px;
+}
 .pushbutton {
   display: flex;
   justify-content: center;
@@ -724,4 +768,82 @@ figure {
 .x {
   width: 10px;
   height: 10px;
+}
+.modal-head {
+  margin-top: 40px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-title);
+}
+.modal-label {
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.modal-label-item {
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+.modal-label-input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.modal-label-input-comments {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.acception {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 20px;
+}
+.acception a {
+  text-decoration: underline;
+  color: #2196f3;
+}
+.acception-submit {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--color-slogan);
+  background: var(--color-variable);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  margin-top: 30px;
+  margin-left: 124px;
+  padding: 0;
+}
+.modal-label-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 15px;
+  top: 31px;
 }
