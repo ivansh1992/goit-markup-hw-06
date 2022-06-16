@@ -564,7 +564,7 @@ figure {
   padding-right: 0;
   padding-left: 16px;
   color: #fff;
- outline: none;
+  outline: none;
 }
 
 .newsletter-button {
@@ -908,7 +908,7 @@ figure {
 }
 .acception-input:checked + .acception-text::before {
   background-color: #2196f3;
-  background-image: url(../image/icons.svg#icon-tick);
+  background-image: url(../image/tick.svg);
   background-position: center;
   background-repeat: no-repeat;
   border: #2196f3;
