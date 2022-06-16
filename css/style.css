@@ -563,6 +563,8 @@ figure {
   background-color: var(--color-background);
   padding-right: 0;
   padding-left: 16px;
+  color: #fff;
+ outline: none;
 }
 
 .newsletter-button {
