@@ -500,21 +500,26 @@
         <form class="modal-label">
           <label class="modal-label-item">
             Imie
-            <svg class="modal-label-icon">
+            <svg class="modal-label-icon" style="top: 33px">
               <use href="./image/icons.svg#icon-user"></use>
             </svg>
-            <input class="modal-label-input" type="text" name="username" />
+            <input
+              class="modal-label-input"
+              type="text"
+              name="username"
+              placeholder=""
+            />
           </label>
           <label class="modal-label-item">
             Telefon
-            <svg class="modal-label-icon">
+            <svg class="modal-label-icon" style="top: 100px">
               <use href="./image/icons.svg#icon-telefon"></use>
             </svg>
             <input class="modal-label-input" type="tel" name="phone_number" />
           </label>
           <label class="modal-label-item">
             Email
-            <svg class="modal-label-icon">
+            <svg class="modal-label-icon" style="top: 166px">
               <use href="./image/icons.svg#icon-anvelope-modal"></use>
             </svg>
             <input class="modal-label-input" type="email" name="email" />
@@ -529,8 +534,14 @@
             ></textarea>
           </label>
           <div class="acception">
-            <input type="checkbox" name="acception" value="zgoda" required />
-            <label>
+            <input
+              class="acception-input hidden"
+              type="checkbox"
+              id="acception"
+              value="zgoda"
+              required
+            />
+            <label class="acception-text" for="acception">
               Oświadczam iż akceptuję
               <a href="#Regulamin">Regulamin</a>
               i

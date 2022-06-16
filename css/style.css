@@ -559,7 +559,6 @@ figure {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--color-background);
   padding-right: 0;
@@ -573,13 +572,18 @@ figure {
   justify-content: center;
   align-items: center;
   background: var(--color-variable);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   border-radius: 4px;
   border: 0;
   padding: 0;
   margin-left: 8px;
   color: #fff;
   cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+}
+.newsletter-button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .newsletter-icon {
   width: 24px;
@@ -780,24 +784,43 @@ figure {
   color: var(--color-title);
 }
 .modal-label {
+  position: relative;
   text-align: left;
   margin-left: 40px;
   margin-right: 40px;
 }
 .modal-label-item {
-  position: relative;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+.modal-label-icon {
+  position: absolute;
+  top: 38px;
+  left: 12px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 .modal-label-input {
-  width: 448px;
-  height: 40px;
+  width: 100%;
+  padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-top: 4px;
+  margin-bottom: 4px;
+  outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border, fill;
+}
+.modal-label-input:focus-within {
+  border-color: var(--color-variable);
+}
+.modal-label label:focus-within {
+  fill: var(--color-variable);
 }
 .modal-label-input-comments {
   width: 448px;
@@ -812,38 +835,117 @@ figure {
   letter-spacing: 0.01em;
   padding-top: 12px;
   padding-left: 16px;
+  outline: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border;
+}
+
+.modal-label-input-comments:focus-within {
+  border-color: var(--color-variable);
 }
 .acception {
+  margin-top: 18px;
+}
+.acception a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  color: #2196f3;
+}
+.acception > label {
+  display: flex;
+
+  align-items: center;
+
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-top: 20px;
 }
-.acception a {
-  text-decoration: underline;
-  color: #2196f3;
+.acception-input {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+.acception-text {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  margin-right: 14px;
+}
+.acception-text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+.acception-input:checked + .acception-text::before {
+  background-color: #2196f3;
+  background-image: url(../image/icons.svg#icon-tick);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: #2196f3;
+}
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 .acception-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
+  margin-left: 124px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   color: var(--color-slogan);
   background: var(--color-variable);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
-  margin-top: 30px;
-  margin-left: 124px;
   padding: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+}
+.acception-submit:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .modal-label-icon {
-  position: absolute;
   width: 18px;
   height: 18px;
-  left: 15px;
-  top: 31px;
 }
